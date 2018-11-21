@@ -158,7 +158,7 @@
                 </jdbc.url>
                 <jdbc.username>shangjc</jdbc.username>
                 <jdbc.password>Shang1234</jdbc.password>
-                <log4j.path>/data/logs/tomcat</log4j.path>
+                <log4j.path>/data/logs/tomcat1</log4j.path>
             </properties>
         </profile>
     </profiles>
