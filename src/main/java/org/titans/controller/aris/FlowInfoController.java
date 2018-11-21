@@ -12,6 +12,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
+import org.titans.annotation.AuthenPassport;
 import org.titans.service.aris.IFlowInfoService;
 
 /**
@@ -36,6 +37,7 @@ public class FlowInfoController {
      * 查询流程管理平台中指定的模型信息.
      * @throws Exception 发布异常
      */
+    @AuthenPassport
     @ResponseBody
     @RequestMapping(value = "queryEbpmModelBean")
     public Object queryEbpmModelBean(String modelId) {
@@ -56,6 +58,7 @@ public class FlowInfoController {
      * 查询指定流程所有属性.
      * @throws Exception Exception
      */
+    @AuthenPassport
     @ResponseBody
     @RequestMapping(value = "queryModelDetailInfo")
     public Object queryModelDetailInfo(String modelId) {
@@ -79,6 +82,7 @@ public class FlowInfoController {
      * @return 对象详细信息
      * @throws Exception Exception
      */
+    @AuthenPassport
     @ResponseBody
     @RequestMapping(value = "queryObjDetailInfo")
     public Object queryObjDetailInfo(String guid, String objType) {
@@ -100,6 +104,7 @@ public class FlowInfoController {
      * @return 直接跳转到流程详细信息页面
      * @throws Exception Exception
      */
+    @AuthenPassport
     @RequestMapping(value = "flowDetail")
     public ModelAndView flowDetail(String modelId) {
 
@@ -110,6 +115,7 @@ public class FlowInfoController {
      * 获取文件个路径信息.
      * @return 文件根路径信息
      */
+    @AuthenPassport
     @ResponseBody
     @RequestMapping(value = "getFileRootPath")
     public List<Map<String, String>> getFileRootPath(String id) {
@@ -125,17 +131,4 @@ public class FlowInfoController {
         }
         return result;
     }
-
-//    /**
-//     * 获取指定父类文件下的子文件信息.
-//     * @param parentId 父类文件ID
-//     * @return 子文件信息集合
-//     */
-//    @ResponseBody
-//    @RequestMapping(value = "getFileSubPath")
-//    public List<Map<String, String>> getFileSubPath(String parentId) {
-//
-//        List<Map<String, String>> list = flowInfoService.queryFileInfoByParentId(parentId);
-//        return list;
-//    }
 }
