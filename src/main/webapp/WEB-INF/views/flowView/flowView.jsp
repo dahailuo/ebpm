@@ -27,7 +27,7 @@
     <body class="hold-transition skin-blue sidebar-mini">
         <div class="main-sidebar" style="background-color: #ecf0f5;padding-left: 15px;padding-top:15px;">
             <section class="sidebar">
-                <div class="box box-primary">
+                <div class="box box-primary" style="margin-bottom: 0px;">
                     <div class="box-header with-border">
                         <h3 class="box-title">文件目录</h3>
                     </div>
@@ -58,7 +58,7 @@
                             </div>
                         </div>
                         <div class="col-md-2" style="padding-left:0px;">
-                            <div class="box box-primary">
+                            <div class="box box-primary" style="margin-bottom: 0px;">
                                 <div class="box-header with-border">
                                     <h3 class="box-title">特性</h3>
                                 </div>
